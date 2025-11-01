@@ -1,13 +1,8 @@
-def fib(n): # write Fibonacci series up to n
-	a, b = 0, 1
-	while b < n:
-		print b,
-		a, b = b, a+b
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:  
+        return 1
+    return fib(n-1) + fib(n-2)
 
-def fib2(n): # return Fibonacci series up to n
-	result = []
-	a, b = 0, 1
-	while b < n:
-		result.append(b)
-		a, b = b, a+b
-	return result
+print(fib(3))  # Output: 2
